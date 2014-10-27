@@ -1,0 +1,12 @@
+# Site settings
+title: Incremental Learning
+email: Li(dot)changgeng(at)gmail
+description: > # this means to ignore newlines until "baseurl:"
+  Incremental Learning. Recently focus on Scala, Akka, and Cassandra
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://changgengli.github.io" # the base hostname & protocol for your site
+twitter_username: changgengli
+github_username:  changgengli
+
+# Build settings
+markdown: kramdown
