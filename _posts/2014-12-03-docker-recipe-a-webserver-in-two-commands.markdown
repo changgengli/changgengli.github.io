@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Start a web server and share files in two steps
+title: Start a web server and share files in two steps with Docker
 ---
 
 Today I ran into a situation where I think Docker can help.
