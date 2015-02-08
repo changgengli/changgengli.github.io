@@ -1,0 +1,149 @@
+
+@font-face{
+    font-family: "LCD";
+    src: url('fonts/digit-7-mono.ttf'); 
+}
+input.display {
+  width: 45px;
+  text-align: center;
+  letter-spacing: 3px;
+  font: normal 24px "LCD", Monaco, monospace;
+  background: black;
+  color: yellow;
+  height: 100%;
+  display: inline-block;
+  margin-left: 25px;
+  margin-right: 25px;
+
+}
+.row  {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  background: #CCC;
+  text-align: center;
+}
+
+.bottom-row {
+    text-align: center;
+}
+
+.control-row {
+  background: #CCC;
+  height: 32px;
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+
+#control {
+  display: inline-block;
+  height: 100%;
+  font-size:  24px;
+  width: 80px;
+  background: #ffc;
+  color: #337
+}
+
+.container {
+  /*  background-color: #b0e0e6; */
+}
+
+
+span.cell_hide {
+  color: #CCC;
+}
+
+span.cell_question {
+   color: #690;
+}
+span.cell_marked {
+   color: #663;
+}
+span.open {
+  width:39px;
+  height: 39px;
+  line-height: 39px;
+  border: 1px dotted green;
+  border-style: dotted !important;
+}
+span.open_0 {
+  color: #CCC;
+}
+
+span.open_1 {
+    color: blue;
+}
+
+span.open_2 {
+    color: #360;
+}
+
+span.open_3 {
+    color: #C00;
+}
+
+span.open_4 {
+    color: #309;
+}
+
+span.open_5 {
+    color: #f6c;
+}
+
+span.open_6 {
+    color: #060;
+}
+
+span.open_7 {
+    color: #f96;
+}
+
+span.open_8 {
+    color: #660000;
+}
+
+span.burst {
+    background-color: red;
+}
+
+
+
+.cell_action:active {
+  border-style:ridge;
+}
+.cell {
+
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+/*  margin-left: 1px; */
+  border: 3px outset #d2e3ed;
+  -webkit-border-radius: 1px;
+/*  border-radius: 2px; */
+  font: normal 16px/-2 "Lucida Console", Monaco, monospace;
+  text-height: 35px;
+  text-align:center;
+  text-overflow: ellipsis;
+  background: #CCC;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  line-height:35px;
+}
+
+div.game-row {
+  height: 35px;
+  margin: 2px; 
+}
+
+i.burst:before, i.burst:after { content: ""; position: absolute; top: 0; left: 0; height: 25px; width: 25px; background: red; z-index: 0}
+i.burst:before { -webkit-transform: rotate(30deg); -moz-transform: rotate(30deg); -ms-transform: rotate(30deg); -o-transform: rotate(30deg); } 
+i.burst:after { -webkit-transform: rotate(60deg); -moz-transform: rotate(60deg); -ms-transform: rotate(60deg); -o-transform: rotate(60deg); } 
