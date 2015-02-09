@@ -53998,40 +53998,40 @@ minesweeper.core.gen_board = function gen_board(x, y, mines) {
   return cljs.core.vec.call(null, cljs.core.map.call(null, cljs.core.vec, cljs.core.partition.call(null, x, cljs.core.shuffle.call(null, cljs.core.concat.call(null, cljs.core.repeat.call(null, x * y - mines, 0), cljs.core.repeat.call(null, mines, 1))))));
 };
 minesweeper.core.surround = function surround(x, y) {
-  var iter__4532__auto__ = function iter__66817(s__66818) {
+  var iter__4532__auto__ = function iter__71446(s__71447) {
     return new cljs.core.LazySeq(null, function() {
-      var s__66818__$1 = s__66818;
+      var s__71447__$1 = s__71447;
       while (true) {
-        var temp__4126__auto__ = cljs.core.seq.call(null, s__66818__$1);
+        var temp__4126__auto__ = cljs.core.seq.call(null, s__71447__$1);
         if (temp__4126__auto__) {
           var xs__4624__auto__ = temp__4126__auto__;
           var a = cljs.core.first.call(null, xs__4624__auto__);
-          var iterys__4528__auto__ = function(s__66818__$1, a, xs__4624__auto__, temp__4126__auto__) {
-            return function iter__66819(s__66820) {
-              return new cljs.core.LazySeq(null, function(s__66818__$1, a, xs__4624__auto__, temp__4126__auto__) {
+          var iterys__4528__auto__ = function(s__71447__$1, a, xs__4624__auto__, temp__4126__auto__) {
+            return function iter__71448(s__71449) {
+              return new cljs.core.LazySeq(null, function(s__71447__$1, a, xs__4624__auto__, temp__4126__auto__) {
                 return function() {
-                  var s__66820__$1 = s__66820;
+                  var s__71449__$1 = s__71449;
                   while (true) {
-                    var temp__4126__auto____$1 = cljs.core.seq.call(null, s__66820__$1);
+                    var temp__4126__auto____$1 = cljs.core.seq.call(null, s__71449__$1);
                     if (temp__4126__auto____$1) {
-                      var s__66820__$2 = temp__4126__auto____$1;
-                      if (cljs.core.chunked_seq_QMARK_.call(null, s__66820__$2)) {
-                        var c__4530__auto__ = cljs.core.chunk_first.call(null, s__66820__$2);
+                      var s__71449__$2 = temp__4126__auto____$1;
+                      if (cljs.core.chunked_seq_QMARK_.call(null, s__71449__$2)) {
+                        var c__4530__auto__ = cljs.core.chunk_first.call(null, s__71449__$2);
                         var size__4531__auto__ = cljs.core.count.call(null, c__4530__auto__);
-                        var b__66822 = cljs.core.chunk_buffer.call(null, size__4531__auto__);
+                        var b__71451 = cljs.core.chunk_buffer.call(null, size__4531__auto__);
                         if (function() {
-                          var i__66821 = 0;
+                          var i__71450 = 0;
                           while (true) {
-                            if (i__66821 < size__4531__auto__) {
-                              var b = cljs.core._nth.call(null, c__4530__auto__, i__66821);
+                            if (i__71450 < size__4531__auto__) {
+                              var b = cljs.core._nth.call(null, c__4530__auto__, i__71450);
                               if (!(cljs.core._EQ_.call(null, x, a) && cljs.core._EQ_.call(null, y, b))) {
-                                cljs.core.chunk_append.call(null, b__66822, new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [a, b], null));
-                                var G__66823 = i__66821 + 1;
-                                i__66821 = G__66823;
+                                cljs.core.chunk_append.call(null, b__71451, new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [a, b], null));
+                                var G__71452 = i__71450 + 1;
+                                i__71450 = G__71452;
                                 continue;
                               } else {
-                                var G__66824 = i__66821 + 1;
-                                i__66821 = G__66824;
+                                var G__71453 = i__71450 + 1;
+                                i__71450 = G__71453;
                                 continue;
                               }
                             } else {
@@ -54040,17 +54040,17 @@ minesweeper.core.surround = function surround(x, y) {
                             break;
                           }
                         }()) {
-                          return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__66822), iter__66819.call(null, cljs.core.chunk_rest.call(null, s__66820__$2)));
+                          return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__71451), iter__71448.call(null, cljs.core.chunk_rest.call(null, s__71449__$2)));
                         } else {
-                          return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__66822), null);
+                          return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__71451), null);
                         }
                       } else {
-                        var b = cljs.core.first.call(null, s__66820__$2);
+                        var b = cljs.core.first.call(null, s__71449__$2);
                         if (!(cljs.core._EQ_.call(null, x, a) && cljs.core._EQ_.call(null, y, b))) {
-                          return cljs.core.cons.call(null, new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [a, b], null), iter__66819.call(null, cljs.core.rest.call(null, s__66820__$2)));
+                          return cljs.core.cons.call(null, new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [a, b], null), iter__71448.call(null, cljs.core.rest.call(null, s__71449__$2)));
                         } else {
-                          var G__66825 = cljs.core.rest.call(null, s__66820__$2);
-                          s__66820__$1 = G__66825;
+                          var G__71454 = cljs.core.rest.call(null, s__71449__$2);
+                          s__71449__$1 = G__71454;
                           continue;
                         }
                       }
@@ -54060,15 +54060,15 @@ minesweeper.core.surround = function surround(x, y) {
                     break;
                   }
                 };
-              }(s__66818__$1, a, xs__4624__auto__, temp__4126__auto__), null, null);
+              }(s__71447__$1, a, xs__4624__auto__, temp__4126__auto__), null, null);
             };
-          }(s__66818__$1, a, xs__4624__auto__, temp__4126__auto__);
+          }(s__71447__$1, a, xs__4624__auto__, temp__4126__auto__);
           var fs__4529__auto__ = cljs.core.seq.call(null, iterys__4528__auto__.call(null, cljs.core._conj.call(null, cljs.core._conj.call(null, cljs.core._conj.call(null, cljs.core.List.EMPTY, y + 1), y), y - 1)));
           if (fs__4529__auto__) {
-            return cljs.core.concat.call(null, fs__4529__auto__, iter__66817.call(null, cljs.core.rest.call(null, s__66818__$1)));
+            return cljs.core.concat.call(null, fs__4529__auto__, iter__71446.call(null, cljs.core.rest.call(null, s__71447__$1)));
           } else {
-            var G__66826 = cljs.core.rest.call(null, s__66818__$1);
-            s__66818__$1 = G__66826;
+            var G__71455 = cljs.core.rest.call(null, s__71447__$1);
+            s__71447__$1 = G__71455;
             continue;
           }
         } else {
@@ -54082,8 +54082,8 @@ minesweeper.core.surround = function surround(x, y) {
 };
 minesweeper.core.count_single_surround = function count_single_surround(board, x, y) {
   if (cljs.core.get_in.call(null, board, new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [x, y], null)) === 0) {
-    return cljs.core.apply.call(null, cljs.core._PLUS_, cljs.core.map.call(null, function(p1__66827_SHARP_) {
-      return cljs.core.get_in.call(null, board, p1__66827_SHARP_, 0);
+    return cljs.core.apply.call(null, cljs.core._PLUS_, cljs.core.map.call(null, function(p1__71456_SHARP_) {
+      return cljs.core.get_in.call(null, board, p1__71456_SHARP_, 0);
     }, minesweeper.core.surround.call(null, x, y)));
   } else {
     return "X";
@@ -54092,35 +54092,35 @@ minesweeper.core.count_single_surround = function count_single_surround(board, x
 minesweeper.core.count_surround = function count_surround(xx, yy, board) {
   cljs.core.println.call(null, "counting ", xx, yy, board);
   return cljs.core.vec.call(null, cljs.core.map.call(null, cljs.core.vec, cljs.core.partition.call(null, xx, function() {
-    var iter__4532__auto__ = function iter__66834(s__66835) {
+    var iter__4532__auto__ = function iter__71463(s__71464) {
       return new cljs.core.LazySeq(null, function() {
-        var s__66835__$1 = s__66835;
+        var s__71464__$1 = s__71464;
         while (true) {
-          var temp__4126__auto__ = cljs.core.seq.call(null, s__66835__$1);
+          var temp__4126__auto__ = cljs.core.seq.call(null, s__71464__$1);
           if (temp__4126__auto__) {
             var xs__4624__auto__ = temp__4126__auto__;
             var x = cljs.core.first.call(null, xs__4624__auto__);
-            var iterys__4528__auto__ = function(s__66835__$1, x, xs__4624__auto__, temp__4126__auto__) {
-              return function iter__66836(s__66837) {
-                return new cljs.core.LazySeq(null, function(s__66835__$1, x, xs__4624__auto__, temp__4126__auto__) {
+            var iterys__4528__auto__ = function(s__71464__$1, x, xs__4624__auto__, temp__4126__auto__) {
+              return function iter__71465(s__71466) {
+                return new cljs.core.LazySeq(null, function(s__71464__$1, x, xs__4624__auto__, temp__4126__auto__) {
                   return function() {
-                    var s__66837__$1 = s__66837;
+                    var s__71466__$1 = s__71466;
                     while (true) {
-                      var temp__4126__auto____$1 = cljs.core.seq.call(null, s__66837__$1);
+                      var temp__4126__auto____$1 = cljs.core.seq.call(null, s__71466__$1);
                       if (temp__4126__auto____$1) {
-                        var s__66837__$2 = temp__4126__auto____$1;
-                        if (cljs.core.chunked_seq_QMARK_.call(null, s__66837__$2)) {
-                          var c__4530__auto__ = cljs.core.chunk_first.call(null, s__66837__$2);
+                        var s__71466__$2 = temp__4126__auto____$1;
+                        if (cljs.core.chunked_seq_QMARK_.call(null, s__71466__$2)) {
+                          var c__4530__auto__ = cljs.core.chunk_first.call(null, s__71466__$2);
                           var size__4531__auto__ = cljs.core.count.call(null, c__4530__auto__);
-                          var b__66839 = cljs.core.chunk_buffer.call(null, size__4531__auto__);
+                          var b__71468 = cljs.core.chunk_buffer.call(null, size__4531__auto__);
                           if (function() {
-                            var i__66838 = 0;
+                            var i__71467 = 0;
                             while (true) {
-                              if (i__66838 < size__4531__auto__) {
-                                var y = cljs.core._nth.call(null, c__4530__auto__, i__66838);
-                                cljs.core.chunk_append.call(null, b__66839, minesweeper.core.count_single_surround.call(null, board, x, y));
-                                var G__66840 = i__66838 + 1;
-                                i__66838 = G__66840;
+                              if (i__71467 < size__4531__auto__) {
+                                var y = cljs.core._nth.call(null, c__4530__auto__, i__71467);
+                                cljs.core.chunk_append.call(null, b__71468, minesweeper.core.count_single_surround.call(null, board, x, y));
+                                var G__71469 = i__71467 + 1;
+                                i__71467 = G__71469;
                                 continue;
                               } else {
                                 return true;
@@ -54128,13 +54128,13 @@ minesweeper.core.count_surround = function count_surround(xx, yy, board) {
                               break;
                             }
                           }()) {
-                            return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__66839), iter__66836.call(null, cljs.core.chunk_rest.call(null, s__66837__$2)));
+                            return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__71468), iter__71465.call(null, cljs.core.chunk_rest.call(null, s__71466__$2)));
                           } else {
-                            return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__66839), null);
+                            return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__71468), null);
                           }
                         } else {
-                          var y = cljs.core.first.call(null, s__66837__$2);
-                          return cljs.core.cons.call(null, minesweeper.core.count_single_surround.call(null, board, x, y), iter__66836.call(null, cljs.core.rest.call(null, s__66837__$2)));
+                          var y = cljs.core.first.call(null, s__71466__$2);
+                          return cljs.core.cons.call(null, minesweeper.core.count_single_surround.call(null, board, x, y), iter__71465.call(null, cljs.core.rest.call(null, s__71466__$2)));
                         }
                       } else {
                         return null;
@@ -54142,15 +54142,15 @@ minesweeper.core.count_surround = function count_surround(xx, yy, board) {
                       break;
                     }
                   };
-                }(s__66835__$1, x, xs__4624__auto__, temp__4126__auto__), null, null);
+                }(s__71464__$1, x, xs__4624__auto__, temp__4126__auto__), null, null);
               };
-            }(s__66835__$1, x, xs__4624__auto__, temp__4126__auto__);
+            }(s__71464__$1, x, xs__4624__auto__, temp__4126__auto__);
             var fs__4529__auto__ = cljs.core.seq.call(null, iterys__4528__auto__.call(null, cljs.core.range.call(null, xx)));
             if (fs__4529__auto__) {
-              return cljs.core.concat.call(null, fs__4529__auto__, iter__66834.call(null, cljs.core.rest.call(null, s__66835__$1)));
+              return cljs.core.concat.call(null, fs__4529__auto__, iter__71463.call(null, cljs.core.rest.call(null, s__71464__$1)));
             } else {
-              var G__66841 = cljs.core.rest.call(null, s__66835__$1);
-              s__66835__$1 = G__66841;
+              var G__71470 = cljs.core.rest.call(null, s__71464__$1);
+              s__71464__$1 = G__71470;
               continue;
             }
           } else {
@@ -54165,48 +54165,48 @@ minesweeper.core.count_surround = function count_surround(xx, yy, board) {
 };
 minesweeper.core.init_game = function init_game(x, y, mines) {
   var board = minesweeper.core.gen_board.call(null, x, y, mines);
-  return cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null, "y", "y", -1757859776), new cljs.core.Keyword(null, "counts", "counts", 234305892), new cljs.core.Keyword(null, "states", "states", 1389013542), new cljs.core.Keyword(null, "start", "start", -355208981), new cljs.core.Keyword(null, "x", "x", 2099068185), new cljs.core.Keyword(null, "first", "first", -644103046), new cljs.core.Keyword(null, "end", "end", -268185958), new cljs.core.Keyword(null, "remains", "remains", 167277979), 
-  new cljs.core.Keyword(null, "board", "board", -1907017633)], [y, minesweeper.core.count_surround.call(null, x, y, board), cljs.core.vec.call(null, function() {
+  return cljs.core.PersistentHashMap.fromArrays([new cljs.core.Keyword(null, "y", "y", -1757859776), new cljs.core.Keyword(null, "counts", "counts", 234305892), new cljs.core.Keyword(null, "states", "states", 1389013542), new cljs.core.Keyword(null, "start", "start", -355208981), new cljs.core.Keyword(null, "need-open", "need-open", 103894933), new cljs.core.Keyword(null, "x", "x", 2099068185), new cljs.core.Keyword(null, "first", "first", -644103046), new cljs.core.Keyword(null, "end", "end", -268185958), 
+  new cljs.core.Keyword(null, "remains", "remains", 167277979), new cljs.core.Keyword(null, "board", "board", -1907017633)], [y, minesweeper.core.count_surround.call(null, x, y, board), cljs.core.vec.call(null, function() {
     var iter__4532__auto__ = function(board) {
-      return function iter__66862(s__66863) {
+      return function iter__71491(s__71492) {
         return new cljs.core.LazySeq(null, function(board) {
           return function() {
-            var s__66863__$1 = s__66863;
+            var s__71492__$1 = s__71492;
             while (true) {
-              var temp__4126__auto__ = cljs.core.seq.call(null, s__66863__$1);
+              var temp__4126__auto__ = cljs.core.seq.call(null, s__71492__$1);
               if (temp__4126__auto__) {
-                var s__66863__$2 = temp__4126__auto__;
-                if (cljs.core.chunked_seq_QMARK_.call(null, s__66863__$2)) {
-                  var c__4530__auto__ = cljs.core.chunk_first.call(null, s__66863__$2);
+                var s__71492__$2 = temp__4126__auto__;
+                if (cljs.core.chunked_seq_QMARK_.call(null, s__71492__$2)) {
+                  var c__4530__auto__ = cljs.core.chunk_first.call(null, s__71492__$2);
                   var size__4531__auto__ = cljs.core.count.call(null, c__4530__auto__);
-                  var b__66865 = cljs.core.chunk_buffer.call(null, size__4531__auto__);
+                  var b__71494 = cljs.core.chunk_buffer.call(null, size__4531__auto__);
                   if (function() {
-                    var i__66864 = 0;
+                    var i__71493 = 0;
                     while (true) {
-                      if (i__66864 < size__4531__auto__) {
-                        var a = cljs.core._nth.call(null, c__4530__auto__, i__66864);
-                        cljs.core.chunk_append.call(null, b__66865, cljs.core.vec.call(null, function() {
-                          var iter__4532__auto__ = function(i__66864, a, c__4530__auto__, size__4531__auto__, b__66865, s__66863__$2, temp__4126__auto__, board) {
-                            return function iter__66874(s__66875) {
-                              return new cljs.core.LazySeq(null, function(i__66864, a, c__4530__auto__, size__4531__auto__, b__66865, s__66863__$2, temp__4126__auto__, board) {
+                      if (i__71493 < size__4531__auto__) {
+                        var a = cljs.core._nth.call(null, c__4530__auto__, i__71493);
+                        cljs.core.chunk_append.call(null, b__71494, cljs.core.vec.call(null, function() {
+                          var iter__4532__auto__ = function(i__71493, a, c__4530__auto__, size__4531__auto__, b__71494, s__71492__$2, temp__4126__auto__, board) {
+                            return function iter__71503(s__71504) {
+                              return new cljs.core.LazySeq(null, function(i__71493, a, c__4530__auto__, size__4531__auto__, b__71494, s__71492__$2, temp__4126__auto__, board) {
                                 return function() {
-                                  var s__66875__$1 = s__66875;
+                                  var s__71504__$1 = s__71504;
                                   while (true) {
-                                    var temp__4126__auto____$1 = cljs.core.seq.call(null, s__66875__$1);
+                                    var temp__4126__auto____$1 = cljs.core.seq.call(null, s__71504__$1);
                                     if (temp__4126__auto____$1) {
-                                      var s__66875__$2 = temp__4126__auto____$1;
-                                      if (cljs.core.chunked_seq_QMARK_.call(null, s__66875__$2)) {
-                                        var c__4530__auto____$1 = cljs.core.chunk_first.call(null, s__66875__$2);
+                                      var s__71504__$2 = temp__4126__auto____$1;
+                                      if (cljs.core.chunked_seq_QMARK_.call(null, s__71504__$2)) {
+                                        var c__4530__auto____$1 = cljs.core.chunk_first.call(null, s__71504__$2);
                                         var size__4531__auto____$1 = cljs.core.count.call(null, c__4530__auto____$1);
-                                        var b__66877 = cljs.core.chunk_buffer.call(null, size__4531__auto____$1);
+                                        var b__71506 = cljs.core.chunk_buffer.call(null, size__4531__auto____$1);
                                         if (function() {
-                                          var i__66876 = 0;
+                                          var i__71505 = 0;
                                           while (true) {
-                                            if (i__66876 < size__4531__auto____$1) {
-                                              var b = cljs.core._nth.call(null, c__4530__auto____$1, i__66876);
-                                              cljs.core.chunk_append.call(null, b__66877, new cljs.core.Keyword(null, "hide", "hide", -596913169));
-                                              var G__66882 = i__66876 + 1;
-                                              i__66876 = G__66882;
+                                            if (i__71505 < size__4531__auto____$1) {
+                                              var b = cljs.core._nth.call(null, c__4530__auto____$1, i__71505);
+                                              cljs.core.chunk_append.call(null, b__71506, new cljs.core.Keyword(null, "hide", "hide", -596913169));
+                                              var G__71511 = i__71505 + 1;
+                                              i__71505 = G__71511;
                                               continue;
                                             } else {
                                               return true;
@@ -54214,13 +54214,13 @@ minesweeper.core.init_game = function init_game(x, y, mines) {
                                             break;
                                           }
                                         }()) {
-                                          return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__66877), iter__66874.call(null, cljs.core.chunk_rest.call(null, s__66875__$2)));
+                                          return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__71506), iter__71503.call(null, cljs.core.chunk_rest.call(null, s__71504__$2)));
                                         } else {
-                                          return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__66877), null);
+                                          return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__71506), null);
                                         }
                                       } else {
-                                        var b = cljs.core.first.call(null, s__66875__$2);
-                                        return cljs.core.cons.call(null, new cljs.core.Keyword(null, "hide", "hide", -596913169), iter__66874.call(null, cljs.core.rest.call(null, s__66875__$2)));
+                                        var b = cljs.core.first.call(null, s__71504__$2);
+                                        return cljs.core.cons.call(null, new cljs.core.Keyword(null, "hide", "hide", -596913169), iter__71503.call(null, cljs.core.rest.call(null, s__71504__$2)));
                                       }
                                     } else {
                                       return null;
@@ -54228,13 +54228,13 @@ minesweeper.core.init_game = function init_game(x, y, mines) {
                                     break;
                                   }
                                 };
-                              }(i__66864, a, c__4530__auto__, size__4531__auto__, b__66865, s__66863__$2, temp__4126__auto__, board), null, null);
+                              }(i__71493, a, c__4530__auto__, size__4531__auto__, b__71494, s__71492__$2, temp__4126__auto__, board), null, null);
                             };
-                          }(i__66864, a, c__4530__auto__, size__4531__auto__, b__66865, s__66863__$2, temp__4126__auto__, board);
+                          }(i__71493, a, c__4530__auto__, size__4531__auto__, b__71494, s__71492__$2, temp__4126__auto__, board);
                           return iter__4532__auto__.call(null, cljs.core.range.call(null, x));
                         }()));
-                        var G__66883 = i__66864 + 1;
-                        i__66864 = G__66883;
+                        var G__71512 = i__71493 + 1;
+                        i__71493 = G__71512;
                         continue;
                       } else {
                         return true;
@@ -54242,34 +54242,34 @@ minesweeper.core.init_game = function init_game(x, y, mines) {
                       break;
                     }
                   }()) {
-                    return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__66865), iter__66862.call(null, cljs.core.chunk_rest.call(null, s__66863__$2)));
+                    return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__71494), iter__71491.call(null, cljs.core.chunk_rest.call(null, s__71492__$2)));
                   } else {
-                    return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__66865), null);
+                    return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__71494), null);
                   }
                 } else {
-                  var a = cljs.core.first.call(null, s__66863__$2);
+                  var a = cljs.core.first.call(null, s__71492__$2);
                   return cljs.core.cons.call(null, cljs.core.vec.call(null, function() {
-                    var iter__4532__auto__ = function(a, s__66863__$2, temp__4126__auto__, board) {
-                      return function iter__66878(s__66879) {
-                        return new cljs.core.LazySeq(null, function(a, s__66863__$2, temp__4126__auto__, board) {
+                    var iter__4532__auto__ = function(a, s__71492__$2, temp__4126__auto__, board) {
+                      return function iter__71507(s__71508) {
+                        return new cljs.core.LazySeq(null, function(a, s__71492__$2, temp__4126__auto__, board) {
                           return function() {
-                            var s__66879__$1 = s__66879;
+                            var s__71508__$1 = s__71508;
                             while (true) {
-                              var temp__4126__auto____$1 = cljs.core.seq.call(null, s__66879__$1);
+                              var temp__4126__auto____$1 = cljs.core.seq.call(null, s__71508__$1);
                               if (temp__4126__auto____$1) {
-                                var s__66879__$2 = temp__4126__auto____$1;
-                                if (cljs.core.chunked_seq_QMARK_.call(null, s__66879__$2)) {
-                                  var c__4530__auto__ = cljs.core.chunk_first.call(null, s__66879__$2);
+                                var s__71508__$2 = temp__4126__auto____$1;
+                                if (cljs.core.chunked_seq_QMARK_.call(null, s__71508__$2)) {
+                                  var c__4530__auto__ = cljs.core.chunk_first.call(null, s__71508__$2);
                                   var size__4531__auto__ = cljs.core.count.call(null, c__4530__auto__);
-                                  var b__66881 = cljs.core.chunk_buffer.call(null, size__4531__auto__);
+                                  var b__71510 = cljs.core.chunk_buffer.call(null, size__4531__auto__);
                                   if (function() {
-                                    var i__66880 = 0;
+                                    var i__71509 = 0;
                                     while (true) {
-                                      if (i__66880 < size__4531__auto__) {
-                                        var b = cljs.core._nth.call(null, c__4530__auto__, i__66880);
-                                        cljs.core.chunk_append.call(null, b__66881, new cljs.core.Keyword(null, "hide", "hide", -596913169));
-                                        var G__66884 = i__66880 + 1;
-                                        i__66880 = G__66884;
+                                      if (i__71509 < size__4531__auto__) {
+                                        var b = cljs.core._nth.call(null, c__4530__auto__, i__71509);
+                                        cljs.core.chunk_append.call(null, b__71510, new cljs.core.Keyword(null, "hide", "hide", -596913169));
+                                        var G__71513 = i__71509 + 1;
+                                        i__71509 = G__71513;
                                         continue;
                                       } else {
                                         return true;
@@ -54277,13 +54277,13 @@ minesweeper.core.init_game = function init_game(x, y, mines) {
                                       break;
                                     }
                                   }()) {
-                                    return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__66881), iter__66878.call(null, cljs.core.chunk_rest.call(null, s__66879__$2)));
+                                    return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__71510), iter__71507.call(null, cljs.core.chunk_rest.call(null, s__71508__$2)));
                                   } else {
-                                    return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__66881), null);
+                                    return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__71510), null);
                                   }
                                 } else {
-                                  var b = cljs.core.first.call(null, s__66879__$2);
-                                  return cljs.core.cons.call(null, new cljs.core.Keyword(null, "hide", "hide", -596913169), iter__66878.call(null, cljs.core.rest.call(null, s__66879__$2)));
+                                  var b = cljs.core.first.call(null, s__71508__$2);
+                                  return cljs.core.cons.call(null, new cljs.core.Keyword(null, "hide", "hide", -596913169), iter__71507.call(null, cljs.core.rest.call(null, s__71508__$2)));
                                 }
                               } else {
                                 return null;
@@ -54291,11 +54291,11 @@ minesweeper.core.init_game = function init_game(x, y, mines) {
                               break;
                             }
                           };
-                        }(a, s__66863__$2, temp__4126__auto__, board), null, null);
+                        }(a, s__71492__$2, temp__4126__auto__, board), null, null);
                       };
-                    }(a, s__66863__$2, temp__4126__auto__, board);
+                    }(a, s__71492__$2, temp__4126__auto__, board);
                     return iter__4532__auto__.call(null, cljs.core.range.call(null, x));
-                  }()), iter__66862.call(null, cljs.core.rest.call(null, s__66863__$2)));
+                  }()), iter__71491.call(null, cljs.core.rest.call(null, s__71492__$2)));
                 }
               } else {
                 return null;
@@ -54307,14 +54307,7 @@ minesweeper.core.init_game = function init_game(x, y, mines) {
       };
     }(board);
     return iter__4532__auto__.call(null, cljs.core.range.call(null, y));
-  }()), 0, x, true, false, mines, board]);
-};
-minesweeper.core.all_open_QMARK_ = function all_open_QMARK_(game) {
-  return cljs.core._EQ_.call(null, cljs.core.count.call(null, cljs.core.filter.call(null, function(p1__66885_SHARP_) {
-    return cljs.core.not_EQ_.call(null, 1, p1__66885_SHARP_);
-  }, cljs.core.apply.call(null, cljs.core.concat, game.call(null, new cljs.core.Keyword(null, "board", "board", -1907017633))))), cljs.core.count.call(null, cljs.core.filter.call(null, function(p1__66886_SHARP_) {
-    return cljs.core._EQ_.call(null, new cljs.core.Keyword(null, "open", "open", -1763596448), p1__66886_SHARP_);
-  }, cljs.core.apply.call(null, cljs.core.concat, game.call(null, new cljs.core.Keyword(null, "states", "states", 1389013542))))));
+  }()), 0, x * y - mines, x, true, false, mines, board]);
 };
 minesweeper.core.complete_game = function complete_game(game) {
   window.ga(new cljs.core.Symbol(null, "send'", "send'", -1469860493, null), new cljs.core.Symbol(null, "event'", "event'", -422379035, null), new cljs.core.Symbol(null, "win-game'", "win-game'", -1476105937, null), new cljs.core.Symbol(null, "click'", "click'", 209609017, null));
@@ -54326,35 +54319,38 @@ minesweeper.core.fail_game = function fail_game(game) {
   minesweeper.core.play_sound.call(null, new cljs.core.Keyword(null, "failed", "failed", -1397425762));
   return cljs.core.assoc_in.call(null, game, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "end", "end", -268185958)], null), new cljs.core.Keyword(null, "failed", "failed", -1397425762));
 };
+minesweeper.core.open_cell = function open_cell(game, x, y) {
+  return cljs.core.update_in.call(null, cljs.core.assoc_in.call(null, game, new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "states", "states", 1389013542), x, y], null), new cljs.core.Keyword(null, "open", "open", -1763596448)), new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "need-open", "need-open", 103894933)], null), cljs.core.dec);
+};
 minesweeper.core.open_surround = function open_surround(game, col, mark_to_open) {
   while (true) {
     if (cljs.core.seq.call(null, col)) {
-      var vec__66892 = cljs.core.peek.call(null, col);
-      var x = cljs.core.nth.call(null, vec__66892, 0, null);
-      var y = cljs.core.nth.call(null, vec__66892, 1, null);
+      var vec__71519 = cljs.core.peek.call(null, col);
+      var x = cljs.core.nth.call(null, vec__71519, 0, null);
+      var y = cljs.core.nth.call(null, vec__71519, 1, null);
       var can_open = new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "question", "question", -1411720117), null, new cljs.core.Keyword(null, "hide", "hide", -596913169), null], null), null);
-      var to_open = cljs.core.filter.call(null, cljs.core.complement.call(null, mark_to_open), cljs.core.filter.call(null, function(game, col, mark_to_open, vec__66892, x, y, can_open) {
-        return function(p1__66887_SHARP_) {
-          return can_open.call(null, cljs.core.get_in.call(null, game, cljs.core.into.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "states", "states", 1389013542)], null), p1__66887_SHARP_)));
+      var to_open = cljs.core.filter.call(null, cljs.core.complement.call(null, mark_to_open), cljs.core.filter.call(null, function(game, col, mark_to_open, vec__71519, x, y, can_open) {
+        return function(p1__71514_SHARP_) {
+          return can_open.call(null, cljs.core.get_in.call(null, game, cljs.core.into.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "states", "states", 1389013542)], null), p1__71514_SHARP_)));
         };
-      }(game, col, mark_to_open, vec__66892, x, y, can_open), minesweeper.core.surround.call(null, x, y)));
-      var G__66893 = cljs.core.reduce.call(null, function(game, col, mark_to_open, vec__66892, x, y, can_open, to_open) {
-        return function(p1__66888_SHARP_, p2__66889_SHARP_) {
-          return cljs.core.assoc_in.call(null, p1__66888_SHARP_, cljs.core.into.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "states", "states", 1389013542)], null), p2__66889_SHARP_), new cljs.core.Keyword(null, "open", "open", -1763596448));
+      }(game, col, mark_to_open, vec__71519, x, y, can_open), minesweeper.core.surround.call(null, x, y)));
+      var G__71520 = cljs.core.reduce.call(null, function(game, col, mark_to_open, vec__71519, x, y, can_open, to_open) {
+        return function(p1__71515_SHARP_, p2__71516_SHARP_) {
+          return cljs.core.apply.call(null, minesweeper.core.open_cell, p1__71515_SHARP_, p2__71516_SHARP_);
         };
-      }(game, col, mark_to_open, vec__66892, x, y, can_open, to_open), game, to_open);
-      var G__66894 = cljs.core.into.call(null, cljs.core.pop.call(null, col), cljs.core.filter.call(null, function(game, col, mark_to_open, vec__66892, x, y, can_open, to_open) {
-        return function(p1__66890_SHARP_) {
-          return cljs.core.get_in.call(null, game, cljs.core.into.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "counts", "counts", 234305892)], null), p1__66890_SHARP_), 99) === 0;
+      }(game, col, mark_to_open, vec__71519, x, y, can_open, to_open), game, to_open);
+      var G__71521 = cljs.core.into.call(null, cljs.core.pop.call(null, col), cljs.core.filter.call(null, function(game, col, mark_to_open, vec__71519, x, y, can_open, to_open) {
+        return function(p1__71517_SHARP_) {
+          return cljs.core.get_in.call(null, game, cljs.core.into.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "counts", "counts", 234305892)], null), p1__71517_SHARP_), 99) === 0;
         };
-      }(game, col, mark_to_open, vec__66892, x, y, can_open, to_open), to_open));
-      var G__66895 = cljs.core.into.call(null, mark_to_open, to_open);
-      game = G__66893;
-      col = G__66894;
-      mark_to_open = G__66895;
+      }(game, col, mark_to_open, vec__71519, x, y, can_open, to_open), to_open));
+      var G__71522 = cljs.core.into.call(null, mark_to_open, to_open);
+      game = G__71520;
+      col = G__71521;
+      mark_to_open = G__71522;
       continue;
     } else {
-      if (minesweeper.core.all_open_QMARK_.call(null, game)) {
+      if (game.call(null, new cljs.core.Keyword(null, "need-open", "need-open", 103894933)) === 0) {
         return minesweeper.core.complete_game.call(null, game);
       } else {
         return game;
@@ -54369,11 +54365,11 @@ minesweeper.core.swap_cell = function swap_cell(game, c1, c2) {
   var to_count = cljs.core.into.call(null, cljs.core.into.call(null, cljs.core.PersistentHashSet.fromArray([c2, c1], true), cljs.core.apply.call(null, minesweeper.core.surround, c1)), cljs.core.apply.call(null, minesweeper.core.surround, c2));
   var game__$1 = cljs.core.assoc_in.call(null, cljs.core.assoc_in.call(null, game, cljs.core.into.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "board", "board", -1907017633)], null), c1), c2v), cljs.core.into.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "board", "board", -1907017633)], null), c2), c1v);
   return cljs.core.assoc.call(null, game__$1, new cljs.core.Keyword(null, "counts", "counts", 234305892), cljs.core.reduce.call(null, function(c1v, c2v, to_count, game__$1) {
-    return function(p1__66896_SHARP_, p2__66897_SHARP_) {
-      if (cljs.core.truth_(cljs.core.get_in.call(null, p1__66896_SHARP_, p2__66897_SHARP_))) {
-        return cljs.core.assoc_in.call(null, p1__66896_SHARP_, p2__66897_SHARP_, cljs.core.apply.call(null, minesweeper.core.count_single_surround, game__$1.call(null, new cljs.core.Keyword(null, "board", "board", -1907017633)), p2__66897_SHARP_));
+    return function(p1__71523_SHARP_, p2__71524_SHARP_) {
+      if (cljs.core.truth_(cljs.core.get_in.call(null, p1__71523_SHARP_, p2__71524_SHARP_))) {
+        return cljs.core.assoc_in.call(null, p1__71523_SHARP_, p2__71524_SHARP_, cljs.core.apply.call(null, minesweeper.core.count_single_surround, game__$1.call(null, new cljs.core.Keyword(null, "board", "board", -1907017633)), p2__71524_SHARP_));
       } else {
-        return p1__66896_SHARP_;
+        return p1__71523_SHARP_;
       }
     };
   }(c1v, c2v, to_count, game__$1), game__$1.call(null, new cljs.core.Keyword(null, "counts", "counts", 234305892)), to_count));
@@ -54383,37 +54379,37 @@ minesweeper.core.find_space = function find_space(game) {
   var ry = cljs.core.take.call(null, game.call(null, new cljs.core.Keyword(null, "y", "y", -1757859776)), cljs.core.drop.call(null, cljs.core.rand_int.call(null, game.call(null, new cljs.core.Keyword(null, "y", "y", -1757859776))), cljs.core.cycle.call(null, cljs.core.range.call(null, game.call(null, new cljs.core.Keyword(null, "y", "y", -1757859776))))));
   return cljs.core.last.call(null, function() {
     var iter__4532__auto__ = function(rx, ry) {
-      return function iter__66904(s__66905) {
+      return function iter__71531(s__71532) {
         return new cljs.core.LazySeq(null, function(rx, ry) {
           return function() {
-            var s__66905__$1 = s__66905;
+            var s__71532__$1 = s__71532;
             while (true) {
-              var temp__4126__auto__ = cljs.core.seq.call(null, s__66905__$1);
+              var temp__4126__auto__ = cljs.core.seq.call(null, s__71532__$1);
               if (temp__4126__auto__) {
                 var xs__4624__auto__ = temp__4126__auto__;
                 var x = cljs.core.first.call(null, xs__4624__auto__);
-                var iterys__4528__auto__ = function(s__66905__$1, x, xs__4624__auto__, temp__4126__auto__, rx, ry) {
-                  return function iter__66906(s__66907) {
-                    return new cljs.core.LazySeq(null, function(s__66905__$1, x, xs__4624__auto__, temp__4126__auto__, rx, ry) {
+                var iterys__4528__auto__ = function(s__71532__$1, x, xs__4624__auto__, temp__4126__auto__, rx, ry) {
+                  return function iter__71533(s__71534) {
+                    return new cljs.core.LazySeq(null, function(s__71532__$1, x, xs__4624__auto__, temp__4126__auto__, rx, ry) {
                       return function() {
-                        var s__66907__$1 = s__66907;
+                        var s__71534__$1 = s__71534;
                         while (true) {
-                          var temp__4126__auto____$1 = cljs.core.seq.call(null, s__66907__$1);
+                          var temp__4126__auto____$1 = cljs.core.seq.call(null, s__71534__$1);
                           if (temp__4126__auto____$1) {
-                            var s__66907__$2 = temp__4126__auto____$1;
-                            if (cljs.core.chunked_seq_QMARK_.call(null, s__66907__$2)) {
-                              var c__4530__auto__ = cljs.core.chunk_first.call(null, s__66907__$2);
+                            var s__71534__$2 = temp__4126__auto____$1;
+                            if (cljs.core.chunked_seq_QMARK_.call(null, s__71534__$2)) {
+                              var c__4530__auto__ = cljs.core.chunk_first.call(null, s__71534__$2);
                               var size__4531__auto__ = cljs.core.count.call(null, c__4530__auto__);
-                              var b__66909 = cljs.core.chunk_buffer.call(null, size__4531__auto__);
+                              var b__71536 = cljs.core.chunk_buffer.call(null, size__4531__auto__);
                               if (function() {
-                                var i__66908 = 0;
+                                var i__71535 = 0;
                                 while (true) {
-                                  if (i__66908 < size__4531__auto__) {
-                                    var y = cljs.core._nth.call(null, c__4530__auto__, i__66908);
+                                  if (i__71535 < size__4531__auto__) {
+                                    var y = cljs.core._nth.call(null, c__4530__auto__, i__71535);
                                     if (cljs.core.get_in.call(null, game, new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "board", "board", -1907017633), x, y], null)) === 0) {
-                                      cljs.core.chunk_append.call(null, b__66909, new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [x, y], null));
-                                      var G__66910 = i__66908 + 1;
-                                      i__66908 = G__66910;
+                                      cljs.core.chunk_append.call(null, b__71536, new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [x, y], null));
+                                      var G__71537 = i__71535 + 1;
+                                      i__71535 = G__71537;
                                       continue;
                                     } else {
                                       return null;
@@ -54424,14 +54420,14 @@ minesweeper.core.find_space = function find_space(game) {
                                   break;
                                 }
                               }()) {
-                                return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__66909), iter__66906.call(null, cljs.core.chunk_rest.call(null, s__66907__$2)));
+                                return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__71536), iter__71533.call(null, cljs.core.chunk_rest.call(null, s__71534__$2)));
                               } else {
-                                return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__66909), null);
+                                return cljs.core.chunk_cons.call(null, cljs.core.chunk.call(null, b__71536), null);
                               }
                             } else {
-                              var y = cljs.core.first.call(null, s__66907__$2);
+                              var y = cljs.core.first.call(null, s__71534__$2);
                               if (cljs.core.get_in.call(null, game, new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "board", "board", -1907017633), x, y], null)) === 0) {
-                                return cljs.core.cons.call(null, new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [x, y], null), iter__66906.call(null, cljs.core.rest.call(null, s__66907__$2)));
+                                return cljs.core.cons.call(null, new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [x, y], null), iter__71533.call(null, cljs.core.rest.call(null, s__71534__$2)));
                               } else {
                                 return null;
                               }
@@ -54442,15 +54438,15 @@ minesweeper.core.find_space = function find_space(game) {
                           break;
                         }
                       };
-                    }(s__66905__$1, x, xs__4624__auto__, temp__4126__auto__, rx, ry), null, null);
+                    }(s__71532__$1, x, xs__4624__auto__, temp__4126__auto__, rx, ry), null, null);
                   };
-                }(s__66905__$1, x, xs__4624__auto__, temp__4126__auto__, rx, ry);
+                }(s__71532__$1, x, xs__4624__auto__, temp__4126__auto__, rx, ry);
                 var fs__4529__auto__ = cljs.core.seq.call(null, iterys__4528__auto__.call(null, ry));
                 if (fs__4529__auto__) {
-                  return cljs.core.concat.call(null, fs__4529__auto__, iter__66904.call(null, cljs.core.rest.call(null, s__66905__$1)));
+                  return cljs.core.concat.call(null, fs__4529__auto__, iter__71531.call(null, cljs.core.rest.call(null, s__71532__$1)));
                 } else {
-                  var G__66911 = cljs.core.rest.call(null, s__66905__$1);
-                  s__66905__$1 = G__66911;
+                  var G__71538 = cljs.core.rest.call(null, s__71532__$1);
+                  s__71532__$1 = G__71538;
                   continue;
                 }
               } else {
@@ -54476,19 +54472,19 @@ minesweeper.core.first_click = function first_click(game, x, y) {
 };
 minesweeper.core.click_game = function click_game(game, x, y) {
   var game__$1 = cljs.core.truth_(game.call(null, new cljs.core.Keyword(null, "first", "first", -644103046))) ? cljs.core.assoc.call(null, cljs.core.assoc.call(null, minesweeper.core.first_click.call(null, game, x, y), new cljs.core.Keyword(null, "start", "start", -355208981), (new Date).getTime()), new cljs.core.Keyword(null, "first", "first", -644103046), false) : game;
-  var pred__66915 = cljs.core._EQ_;
-  var expr__66916 = cljs.core.get_in.call(null, game__$1, new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "states", "states", 1389013542), x, y], null));
-  if (cljs.core.truth_(pred__66915.call(null, new cljs.core.Keyword(null, "flag", "flag", 1088647881), expr__66916))) {
+  var pred__71542 = cljs.core._EQ_;
+  var expr__71543 = cljs.core.get_in.call(null, game__$1, new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "states", "states", 1389013542), x, y], null));
+  if (cljs.core.truth_(pred__71542.call(null, new cljs.core.Keyword(null, "flag", "flag", 1088647881), expr__71543))) {
     return game__$1;
   } else {
-    if (cljs.core.truth_(pred__66915.call(null, new cljs.core.Keyword(null, "open", "open", -1763596448), expr__66916))) {
+    if (cljs.core.truth_(pred__71542.call(null, new cljs.core.Keyword(null, "open", "open", -1763596448), expr__71543))) {
       return game__$1;
     } else {
-      var game__$2 = cljs.core.assoc_in.call(null, game__$1, new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "states", "states", 1389013542), x, y], null), new cljs.core.Keyword(null, "open", "open", -1763596448));
+      var game__$2 = minesweeper.core.open_cell.call(null, game__$1, x, y);
       if (cljs.core._EQ_.call(null, cljs.core.get_in.call(null, game__$2, new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "board", "board", -1907017633), x, y], null)), 1)) {
         return minesweeper.core.fail_game.call(null, game__$2);
       } else {
-        if (minesweeper.core.all_open_QMARK_.call(null, game__$2)) {
+        if (game__$2.call(null, new cljs.core.Keyword(null, "need-open", "need-open", 103894933)) === 0) {
           return minesweeper.core.complete_game.call(null, game__$2);
         } else {
           if (cljs.core.get_in.call(null, game__$2, new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "counts", "counts", 234305892), x, y], null)) === 0) {
@@ -54503,33 +54499,33 @@ minesweeper.core.click_game = function click_game(game, x, y) {
 };
 minesweeper.core.mark_game = function mark_game(game, x, y) {
   var state = function() {
-    var pred__66924 = cljs.core._EQ_;
-    var expr__66925 = cljs.core.get_in.call(null, game, new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "states", "states", 1389013542), x, y], null));
-    if (cljs.core.truth_(pred__66924.call(null, new cljs.core.Keyword(null, "hide", "hide", -596913169), expr__66925))) {
+    var pred__71551 = cljs.core._EQ_;
+    var expr__71552 = cljs.core.get_in.call(null, game, new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "states", "states", 1389013542), x, y], null));
+    if (cljs.core.truth_(pred__71551.call(null, new cljs.core.Keyword(null, "hide", "hide", -596913169), expr__71552))) {
       return new cljs.core.Keyword(null, "flag", "flag", 1088647881);
     } else {
-      if (cljs.core.truth_(pred__66924.call(null, new cljs.core.Keyword(null, "open", "open", -1763596448), expr__66925))) {
+      if (cljs.core.truth_(pred__71551.call(null, new cljs.core.Keyword(null, "open", "open", -1763596448), expr__71552))) {
         return new cljs.core.Keyword(null, "open", "open", -1763596448);
       } else {
-        if (cljs.core.truth_(pred__66924.call(null, new cljs.core.Keyword(null, "flag", "flag", 1088647881), expr__66925))) {
+        if (cljs.core.truth_(pred__71551.call(null, new cljs.core.Keyword(null, "flag", "flag", 1088647881), expr__71552))) {
           return new cljs.core.Keyword(null, "question", "question", -1411720117);
         } else {
-          if (cljs.core.truth_(pred__66924.call(null, new cljs.core.Keyword(null, "question", "question", -1411720117), expr__66925))) {
+          if (cljs.core.truth_(pred__71551.call(null, new cljs.core.Keyword(null, "question", "question", -1411720117), expr__71552))) {
             return new cljs.core.Keyword(null, "hide", "hide", -596913169);
           } else {
-            throw new Error([cljs.core.str("No matching clause: "), cljs.core.str(expr__66925)].join(""));
+            throw new Error([cljs.core.str("No matching clause: "), cljs.core.str(expr__71552)].join(""));
           }
         }
       }
     }
   }();
   var game__$1 = cljs.core.assoc_in.call(null, game, new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "states", "states", 1389013542), x, y], null), state);
-  var pred__66927 = cljs.core._EQ_;
-  var expr__66928 = state;
-  if (cljs.core.truth_(pred__66927.call(null, new cljs.core.Keyword(null, "flag", "flag", 1088647881), expr__66928))) {
+  var pred__71554 = cljs.core._EQ_;
+  var expr__71555 = state;
+  if (cljs.core.truth_(pred__71554.call(null, new cljs.core.Keyword(null, "flag", "flag", 1088647881), expr__71555))) {
     return cljs.core.update_in.call(null, game__$1, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "remains", "remains", 167277979)], null), cljs.core.dec);
   } else {
-    if (cljs.core.truth_(pred__66927.call(null, new cljs.core.Keyword(null, "question", "question", -1411720117), expr__66928))) {
+    if (cljs.core.truth_(pred__71554.call(null, new cljs.core.Keyword(null, "question", "question", -1411720117), expr__71555))) {
       return cljs.core.update_in.call(null, game__$1, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "remains", "remains", 167277979)], null), cljs.core.inc);
     } else {
       return game__$1;
@@ -54540,13 +54536,13 @@ minesweeper.core.explore_game = function explore_game(game, x, y) {
   if (cljs.core.not_EQ_.call(null, cljs.core.get_in.call(null, game, new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "states", "states", 1389013542), x, y], null)), new cljs.core.Keyword(null, "open", "open", -1763596448))) {
     return game;
   } else {
-    var to_open = cljs.core.filter.call(null, function(p1__66930_SHARP_) {
-      return(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "question", "question", -1411720117), null, new cljs.core.Keyword(null, "hide", "hide", -596913169), null], null), null)).call(null, cljs.core.get_in.call(null, game, cljs.core.into.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "states", "states", 1389013542)], null), p1__66930_SHARP_), new cljs.core.Keyword(null, 
+    var to_open = cljs.core.filter.call(null, function(p1__71557_SHARP_) {
+      return(new cljs.core.PersistentHashSet(null, new cljs.core.PersistentArrayMap(null, 2, [new cljs.core.Keyword(null, "question", "question", -1411720117), null, new cljs.core.Keyword(null, "hide", "hide", -596913169), null], null), null)).call(null, cljs.core.get_in.call(null, game, cljs.core.into.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "states", "states", 1389013542)], null), p1__71557_SHARP_), new cljs.core.Keyword(null, 
       "outbound", "outbound", 1805839272)));
     }, minesweeper.core.surround.call(null, x, y));
     var marked = cljs.core.count.call(null, cljs.core.filter.call(null, function(to_open) {
-      return function(p1__66931_SHARP_) {
-        return cljs.core._EQ_.call(null, new cljs.core.Keyword(null, "flag", "flag", 1088647881), cljs.core.get_in.call(null, game, cljs.core.into.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "states", "states", 1389013542)], null), p1__66931_SHARP_), new cljs.core.Keyword(null, "outbounded", "outbounded", 297515408)));
+      return function(p1__71558_SHARP_) {
+        return cljs.core._EQ_.call(null, new cljs.core.Keyword(null, "flag", "flag", 1088647881), cljs.core.get_in.call(null, game, cljs.core.into.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "states", "states", 1389013542)], null), p1__71558_SHARP_), new cljs.core.Keyword(null, "outbounded", "outbounded", 297515408)));
       };
     }(to_open), minesweeper.core.surround.call(null, x, y)));
     var counts = cljs.core.get_in.call(null, game, new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "counts", "counts", 234305892), x, y], null));
@@ -54557,8 +54553,8 @@ minesweeper.core.explore_game = function explore_game(game, x, y) {
         return game;
       } else {
         return cljs.core.reduce.call(null, function(to_open, marked, counts) {
-          return function(p1__66932_SHARP_, p2__66933_SHARP_) {
-            return cljs.core.apply.call(null, minesweeper.core.click_game, p1__66932_SHARP_, p2__66933_SHARP_);
+          return function(p1__71559_SHARP_, p2__71560_SHARP_) {
+            return cljs.core.apply.call(null, minesweeper.core.click_game, p1__71559_SHARP_, p2__71560_SHARP_);
           };
         }(to_open, marked, counts), game, to_open);
       }
@@ -54575,16 +54571,16 @@ minesweeper.core.print_game = function print_game(game) {
     }
   }()), "-*\x3d");
   cljs.core.println.call(null, "\x3d\x3d\x3d\x3d\x3d\x3d\x3d\x3d\x3d\x3d\x3d\x3d\x3d\x3d\x3d\x3d\x3d");
-  cljs.core.doall.call(null, cljs.core.map.call(null, function(p1__66934_SHARP_) {
-    return cljs.core.println.call(null, cljs.core.apply.call(null, cljs.core.str, cljs.core.map.call(null, cljs.core.str, p1__66934_SHARP_)));
+  cljs.core.doall.call(null, cljs.core.map.call(null, function(p1__71561_SHARP_) {
+    return cljs.core.println.call(null, cljs.core.apply.call(null, cljs.core.str, cljs.core.map.call(null, cljs.core.str, p1__71561_SHARP_)));
   }, game.call(null, new cljs.core.Keyword(null, "board", "board", -1907017633))));
   cljs.core.println.call(null, "\x3d\x3d\x3d\x3d\x3d\x3d\x3d\x3d\x3d\x3d\x3d\x3d\x3d\x3d\x3d\x3d\x3d");
-  cljs.core.doall.call(null, cljs.core.map.call(null, function(p1__66935_SHARP_) {
-    return cljs.core.println.call(null, cljs.core.apply.call(null, cljs.core.str, cljs.core.map.call(null, cljs.core.comp.call(null, cljs.core.str, cljs.core.first, cljs.core.name), p1__66935_SHARP_)));
+  cljs.core.doall.call(null, cljs.core.map.call(null, function(p1__71562_SHARP_) {
+    return cljs.core.println.call(null, cljs.core.apply.call(null, cljs.core.str, cljs.core.map.call(null, cljs.core.comp.call(null, cljs.core.str, cljs.core.first, cljs.core.name), p1__71562_SHARP_)));
   }, game.call(null, new cljs.core.Keyword(null, "states", "states", 1389013542))));
   cljs.core.println.call(null, "\x3d\x3d\x3d\x3d\x3d\x3d\x3d\x3d\x3d\x3d\x3d\x3d\x3d\x3d\x3d\x3d\x3d");
-  cljs.core.doall.call(null, cljs.core.map.call(null, function(p1__66936_SHARP_) {
-    return cljs.core.println.call(null, cljs.core.apply.call(null, cljs.core.str, cljs.core.map.call(null, cljs.core.str, p1__66936_SHARP_)));
+  cljs.core.doall.call(null, cljs.core.map.call(null, function(p1__71563_SHARP_) {
+    return cljs.core.println.call(null, cljs.core.apply.call(null, cljs.core.str, cljs.core.map.call(null, cljs.core.str, p1__71563_SHARP_)));
   }, game.call(null, new cljs.core.Keyword(null, "counts", "counts", 234305892))));
   return cljs.core.println.call(null, "\x3d\x3d\x3d\x3d\x3d\x3d\x3d\x3d\x3d\x3d\x3d\x3d\x3d\x3d\x3d\x3d\x3d");
 };
@@ -54729,14 +54725,13 @@ minesweeper.core.timer_component = function timer_component() {
     return x__4100__auto__ < y__4101__auto__ ? x__4100__auto__ : y__4101__auto__;
   }())], null)], null);
 };
-minesweeper.core.game_table = function game_table() {
+minesweeper.core.control_component = function control_component() {
   var game = cljs.core.deref.call(null, minesweeper.core.game_state);
   var end_QMARK_ = game.call(null, new cljs.core.Keyword(null, "end", "end", -268185958));
-  return cljs.core.into.call(null, new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div.board-panel", "div.board-panel", -1316012753), new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div.control-row.row", "div.control-row.row", -1255545020), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "input.display", "input.display", 
-  1320297405), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "type", "type", 1174270348), "text", new cljs.core.Keyword(null, "read-only", "read-only", -191706886), true, new cljs.core.Keyword(null, "value", "value", 305978217), minesweeper.core.format.call(null, game.call(null, new cljs.core.Keyword(null, "remains", "remains", 167277979)))], null)], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "button#control", 
-  "button#control", 1053242400), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "on-click", "on-click", 1632826543), function(game, end_QMARK_) {
+  return new cljs.core.PersistentVector(null, 4, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div.control-row", "div.control-row", -1871869946), new cljs.core.PersistentVector(null, 2, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "input.display", "input.display", 1320297405), new cljs.core.PersistentArrayMap(null, 3, [new cljs.core.Keyword(null, "type", "type", 1174270348), "text", new cljs.core.Keyword(null, "read-only", "read-only", -191706886), 
+  true, new cljs.core.Keyword(null, "value", "value", 305978217), minesweeper.core.format.call(null, game.call(null, new cljs.core.Keyword(null, "remains", "remains", 167277979)))], null)], null), new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "button#control", "button#control", 1053242400), new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "on-click", "on-click", 1632826543), function(game, end_QMARK_) {
     return function() {
-      return minesweeper.core.new_game_BANG_.call(null, new cljs.core.Keyword(null, "beginner", "beginner", 1051587633));
+      return minesweeper.core.new_game_BANG_.call(null, cljs.core.rand_nth.call(null, new cljs.core.PersistentVector(null, 3, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "beginner", "beginner", 1051587633), new cljs.core.Keyword(null, "intermediate", "intermediate", 369199812), new cljs.core.Keyword(null, "expert", "expert", -816403615)], null)));
     };
   }(game, end_QMARK_)], null), function() {
     var or__3776__auto__ = (new cljs.core.PersistentArrayMap(null, 1, [new cljs.core.Keyword(null, "failed", "failed", -1397425762), "\u2639"], null)).call(null, end_QMARK_);
@@ -54745,9 +54740,16 @@ minesweeper.core.game_table = function game_table() {
     } else {
       return "\u263a";
     }
-  }()], null), minesweeper.core.timer_component.call(null)], null)], null), cljs.core.map.call(null, minesweeper.core.game_row, cljs.core.repeat.call(null, end_QMARK_), cljs.core.range.call(null), game.call(null, new cljs.core.Keyword(null, "board", "board", -1907017633)), game.call(null, new cljs.core.Keyword(null, "states", "states", 1389013542)), game.call(null, new cljs.core.Keyword(null, "counts", "counts", 234305892))));
+  }()], null), minesweeper.core.timer_component.call(null)], null);
+};
+minesweeper.core.game_table = function game_table() {
+  var game = cljs.core.deref.call(null, minesweeper.core.game_state);
+  var end_QMARK_ = game.call(null, new cljs.core.Keyword(null, "end", "end", -268185958));
+  return cljs.core.into.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [new cljs.core.Keyword(null, "div.board-panel", "div.board-panel", -1316012753)], null), cljs.core.map.call(null, minesweeper.core.game_row, cljs.core.repeat.call(null, end_QMARK_), cljs.core.range.call(null), game.call(null, new cljs.core.Keyword(null, "board", "board", -1907017633)), game.call(null, new cljs.core.Keyword(null, "states", "states", 1389013542)), game.call(null, new cljs.core.Keyword(null, 
+  "counts", "counts", 234305892))));
 };
 minesweeper.core.start = function start() {
   minesweeper.core.new_game_BANG_.call(null, new cljs.core.Keyword(null, "beginner", "beginner", 1051587633));
-  return reagent.core.render_component.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [minesweeper.core.game_table], null), document.getElementById("root"));
+  reagent.core.render_component.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [minesweeper.core.control_component], null), document.getElementById("controls"));
+  return reagent.core.render_component.call(null, new cljs.core.PersistentVector(null, 1, 5, cljs.core.PersistentVector.EMPTY_NODE, [minesweeper.core.game_table], null), document.getElementById("rows"));
 };
