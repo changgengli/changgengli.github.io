@@ -131,6 +131,10 @@ code {
     border: 1px solid $grey-color-light;
     border-radius: 3px;
     background-color: #eef;
+    overflow-wrap: normal;
+    white-space: pre;
+    overflow-x: auto;
+
 }
 
 code {
